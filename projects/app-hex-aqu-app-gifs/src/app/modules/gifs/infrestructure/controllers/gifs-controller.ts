@@ -1,6 +1,6 @@
 
 import {Request , Response} from 'express'
-import { SearchTag } from '../../application/search-Tag';
+import { SearchTag } from '../../application/search-Tag.app';
 
 export class GifsController {
 

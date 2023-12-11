@@ -7,8 +7,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { CardListComponent } from './components/card-list/card-list.component';
 
 //services - Aplication
-//import { GigsService } from '../../application/services/gifs.service';
-import { SearchTag } from '../../application/search-Tag';
+import { SearchTag } from '../../application/search-Tag.app';
+import { TagHistory } from '../../application/TagHistory.app';
 
 
 //app\modules\gifs\infrestructure\presentation\gifs.module.ts
