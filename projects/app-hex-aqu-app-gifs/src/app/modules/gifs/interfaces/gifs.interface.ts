@@ -1,5 +1,7 @@
+import { Girfs } from "../domain/gifs";
+
 export interface SearchResponse {
-    data:       Gif[];
+    data:       Girfs[]; //tipo de clase Gifs
     pagination: Pagination;
     meta:       Meta;
 }

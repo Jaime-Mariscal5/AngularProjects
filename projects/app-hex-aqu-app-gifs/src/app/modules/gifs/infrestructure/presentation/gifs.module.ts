@@ -8,14 +8,16 @@ import { CardListComponent } from './components/card-list/card-list.component';
 
 //services - Aplication
 import { SearchTag } from '../../application/search-Tag.app';
-import { TagHistory } from '../../application/TagHistory.app';
+import { showTag } from '../../application/show-Tag.app';
 
+//infrestructure
+import { GifInfrestructure } from '../gifs.infrestructure';
 
 //app\modules\gifs\infrestructure\presentation\gifs.module.ts
 
 //clases de capas
-const PropAplication = [ SearchTag ]; //agregfar clase application
-const PropInfrastructure = [];
+const PropAplication = [ SearchTag , showTag ]; //agregfar clase application
+const PropInfrastructure = [GifInfrestructure];
 
 @NgModule({
   declarations:[
@@ -25,6 +27,6 @@ const PropInfrastructure = [];
   ],
   imports: [CommonModule],
   exports:[HomePageComponent],
- providers:[ ... PropAplication]//agregar 
+ providers:[ ... PropAplication , PropInfrastructure]//agregar 
 })
 export class GifsModule { }
