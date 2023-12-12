@@ -14,9 +14,7 @@ export class HomePageComponent {
     
     this.showT.getGifs().subscribe((gifs)=>{
       console.log("Gifs recibidos componente card");
-      console.log(gifs);
       this.gifs = gifs
-      console.log(this.gifs);
     })
   }
 
