@@ -4,8 +4,7 @@
     <h3 class="text-light">GifsApp</h3>
     <hr>
     <div *ngFor="let item of Tags"   class="list-group list-reset">
-        <button  class="list-group-item list-group-item-action">
-            <!-- Pipe Uppercase Capitalizar la primera letra -->
+        <button (click)="onButtonClick(item)"  class="list-group-item list-group-item-action">
              {{item | titlecase}} 
         </button>
     </div>

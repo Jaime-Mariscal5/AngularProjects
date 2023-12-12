@@ -32,7 +32,7 @@ export class Girfs {
   private is_sticker!: number;
   private import_datetime!: Date;
   private trending_datetime: Date | TrendingDatetimeEnum;
-  private images: Images;
+  public images: Images;
   private analytics_response_payload!: string;
   private analytics: Analytics;
   private user?: User;

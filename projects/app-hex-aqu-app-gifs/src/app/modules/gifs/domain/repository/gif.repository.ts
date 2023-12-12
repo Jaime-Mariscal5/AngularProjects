@@ -7,4 +7,5 @@ import { SearchResponse } from "../../interfaces/gifs.interface";
 //app\modules\gifs\domain\repository\gif.repository.ts
 export interface gifRepository {
     getGifs(strSearch:string):Observable<SearchResponse>
+    saveList(List:string[]):void;
 }

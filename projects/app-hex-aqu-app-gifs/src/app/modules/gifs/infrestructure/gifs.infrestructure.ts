@@ -4,7 +4,6 @@
  import { Injectable } from "@angular/core";
  import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Girfs } from "../domain/gifs";
 import { gifRepository } from "../domain/repository/gif.repository";
 import { SearchResponse } from "../interfaces/gifs.interface";
 
@@ -16,6 +15,7 @@ export class GifInfrestructure implements gifRepository {
 
     private apiKey: string = 'XoPuV5MlgUTsDn58kNYixK3mCo4PP9X9';
     private ApiUrl: string = 'http://api.giphy.com/v1/gifs' 
+    private storageKey = 'history'
 
     constructor(private http: HttpClient){}
 
@@ -25,6 +25,15 @@ export class GifInfrestructure implements gifRepository {
             .set('limit','10')
             .set('q',strSearch)
         return this.http.get<SearchResponse>(`${this.ApiUrl}/search`,{params});//retorna un obervable 
+    }
+
+    loadLocalStorage(): string[] {
+        return localStorage.getItem(this.storageKey) ? JSON.parse(localStorage.getItem(this.storageKey)!) : [];
+    }
+
+    //local sotrage
+    saveList(list:string[]):void{
+        localStorage.setItem(this.storageKey, JSON.stringify(list));
     }
 
 }
