@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Inject, Injectable } from "@angular/core";
 import { gifRepository } from "../domain/repository/gif.repository";
 import { GifInfrestructure } from "../infrestructure/gifs.infrestructure";
 import { showTag } from "./show-Tag.app";
@@ -7,12 +7,22 @@ import { showTag } from "./show-Tag.app";
 export class TagHistory {
     private history: string[] = [];
 
+
+    
+    //Mal -> private gifInfrestructure: GifInfrestructure 
+    /**
+     * PROFESSOR COMMENT
+     * coloca la inyección de gitRepository y no la de GitInfrestructure. 
+     * Si bien en la primera línea de este método estás asignando la inyección a la propiedad gifRepository, 
+     * el concepto es que no debes inyectar la implementación sino la abstracción.
+     * X ->  constructor( private gifInfrestructure: GifInfrestructure , private showT:showTag )
+     */
     gifRepository:gifRepository
-    constructor( private gifInfrestructure: GifInfrestructure , private showT:showTag )
+    constructor( @Inject(GifInfrestructure) _gifRepository: gifRepository, private showT:showTag )
     { 
-       this.gifRepository = this.gifInfrestructure;  
-       if(this.gifInfrestructure.loadLocalStorage().length){
-           this.history = this.gifInfrestructure.loadLocalStorage();
+       this.gifRepository = _gifRepository;  
+       if(this.gifRepository.loadLocalStorage().length){
+           this.history = this.gifRepository.loadLocalStorage();
            this.OrganizeHistory(this.history[0]);
        }
     }

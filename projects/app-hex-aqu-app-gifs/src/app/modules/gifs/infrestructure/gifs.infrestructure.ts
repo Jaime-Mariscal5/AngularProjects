@@ -31,7 +31,6 @@ export class GifInfrestructure implements gifRepository {
         return localStorage.getItem(this.storageKey) ? JSON.parse(localStorage.getItem(this.storageKey)!) : [];
     }
 
-    //local sotrage
     saveList(list:string[]):void{
         localStorage.setItem(this.storageKey, JSON.stringify(list));
     }
