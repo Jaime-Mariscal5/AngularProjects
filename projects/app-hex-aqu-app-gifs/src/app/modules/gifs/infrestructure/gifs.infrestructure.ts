@@ -14,8 +14,8 @@ import { SearchResponse } from "../interfaces/gifs.interface";
 export class GifInfrestructure implements gifRepository {
 
     private apiKey: string = 'XoPuV5MlgUTsDn58kNYixK3mCo4PP9X9';
-    private ApiUrl: string = 'http://api.giphy.com/v1/gifs' 
-    private storageKey = 'history'
+    private ApiUrl: string = 'http://api.giphy.com/v1/gifs';
+    private storageKey = 'history';
 
     constructor(private http: HttpClient){}
 
