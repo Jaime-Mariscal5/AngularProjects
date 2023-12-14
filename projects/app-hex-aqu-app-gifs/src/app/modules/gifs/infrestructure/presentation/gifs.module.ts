@@ -12,6 +12,10 @@ import { showTag } from '../../application/show-Tag.app';
 
 //infrestructure
 import { GifInfrestructure } from '../gifs.infrestructure';
+import { GifCardComponent } from './components/gif-card/gif-card.component';
+
+//Modulos
+import { SharedModule } from 'projects/app-hex-aqu-app-gifs/src/app/shared/shared.module';
 
 //app\modules\gifs\infrestructure\presentation\gifs.module.ts
 
@@ -23,9 +27,10 @@ const PropInfrastructure = [GifInfrestructure];
   declarations:[
     HomePageComponent, 
     SearchBoxComponent,
-    CardListComponent
+    CardListComponent,
+    GifCardComponent
   ],
-  imports: [CommonModule],
+  imports: [CommonModule , SharedModule],
   exports:[HomePageComponent],
  providers:[ ... PropAplication , PropInfrastructure]//agregar 
 })

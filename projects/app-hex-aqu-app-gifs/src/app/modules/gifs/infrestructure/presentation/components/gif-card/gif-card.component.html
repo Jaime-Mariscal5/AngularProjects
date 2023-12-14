@@ -1,0 +1,21 @@
+<!--TODO: crear imagen
+<div class="card mb-2 text-center bg-dark">
+
+    <img [src]="gif.images.downsized.url" alt="gif.title"
+    
+    class="card-img-top">
+
+    <div class="card-body text-white">
+        <p class="card-text">
+            {{ gif["title"] | titlecase }}
+        </p>
+    </div>
+</div>
+-->
+<div class="card mb-2 text-center bg-dark text-center">
+    <lazy-image></lazy-image>
+   <div class="card-body text-white">
+      <p class="card-text">{{ gif["title"] | titlecase }}</p>
+    </div>
+  </div>
+
