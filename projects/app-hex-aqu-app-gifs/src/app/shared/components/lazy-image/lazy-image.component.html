@@ -1,1 +1,18 @@
 <p>lazy-image works!</p>
+
+
+<div class="d-flex justify-content-center">
+
+    <!--Las imagenes en Angular tienen un evento Load -->
+    <img [src]="url" [alt]="alt" 
+    class="card-img-top animate__animated animate__fadeIn"
+    (load)="onLoad()"
+    [ngStyle]="{display: hasLoad ? '' : 'none'}"
+    >
+
+    <img 
+    *ngIf="!hasLoad"
+    src="assets/svg/loaders/puff.svg" 
+    height="35" width="35" class="mt-3 mb-3"
+    alt="loader">
+</div>
