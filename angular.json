@@ -116,6 +116,7 @@
               "projects/app-country/src/assets"
             ],
             "styles": [
+              "projects/app-country/src/custom-theme.scss",
               "projects/app-country/src/styles.css"
             ],
             "scripts": []
