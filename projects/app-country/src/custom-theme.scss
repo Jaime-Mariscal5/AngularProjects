@@ -1,50 +1,12 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
+
 @use '@angular/material' as mat;
+@import './assets/scss/colors';
 @include mat.core();
 
-/* For use in src/lib/core/theming/_palette.scss */
-$md-paleta-dark: (
-    50 : #e2e2e3,
-    100 : #b6b7b8,
-    200 : #868789,
-    300 : #565659,
-    400 : #313236,
-    500 : #0d0e12,
-    600 : #0b0c10,
-    700 : #090a0d,
-    800 : #07080a,
-    900 : #030405,
-    A100 : #4d4dff,
-    A200 : #1a1aff,
-    A400 : #0000e6,
-    A700 : #0000cd,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #ffffff,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #ffffff,
-        A200 : #ffffff,
-        A400 : #ffffff,
-        A700 : #ffffff,
-    )
-);
-
-
-
-
-$appCountry-primary: mat.define-palette($md-paleta-dark);
-$appCountry-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-$appCountry-warn: mat.define-palette(mat.$red-palette);
+$appCountry-primary: mat.define-palette($md-mat-primary);
+$appCountry-accent: mat.define-palette($md-mat-accent);
+$appCountry-warn: mat.define-palette($md-mat-warn);
 
 $appCountry-theme: mat.define-light-theme((
   color: (

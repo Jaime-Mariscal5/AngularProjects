@@ -1,12 +1,14 @@
 
+<p>
+    <mat-toolbar>
+      <span>My Application</span>
+    </mat-toolbar>
+  </p>
+  
 
-<mat-sidenav-container>
-  <mat-sidenav opened="true" mode="push"
-  *ngIf="showMenu"
-  >
-    Menu 
-  </mat-sidenav>
-  <mat-sidenav-content>
-    Contenido
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content><h1>app component works</h1></mat-drawer-content>
+</mat-drawer-container>
+  
