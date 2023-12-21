@@ -4,17 +4,55 @@
 @import './assets/scss/colors';
 @include mat.core();
 
-$appCountry-primary: mat.define-palette($md-mat-primary);
-$appCountry-accent: mat.define-palette($md-mat-accent);
-$appCountry-warn: mat.define-palette($md-mat-warn);
 
-$appCountry-theme: mat.define-light-theme((
-  color: (
-    primary: $appCountry-primary,
-    accent: $appCountry-accent,
-    warn: $appCountry-warn,
-  )
-));
 
-@include mat.all-component-themes($appCountry-theme);
+
+
+// Incluir los temas en componentes específicos
+.light-theme {
+  $appCountry-primary-light: mat.define-palette($md-mat-primary,500);
+  $appCountry-accent-light: mat.define-palette($md-mat-accent,500);
+  $appCountry-warn-light: mat.define-palette($md-mat-warn,500);
+
+  //Tema Light
+  $appCountry-theme-light: mat.define-light-theme((
+    color: (
+      primary: $appCountry-primary-light,
+      accent: $appCountry-accent-light,
+      warn: $appCountry-warn-light,
+    )
+  ));
+  @include mat.all-component-themes($appCountry-theme-light);
+  mat-drawer-content{
+    background: map-get($Light,  body-background );
+  }
+  mat-toolbar{
+    background: map-get($Light, Allcards-background );
+  }
+}
+
+.dark-theme {
+ 
+    //palesa de colores darks
+    $appCountry-primary-dark: mat.define-palette($md-primary-dark,900);
+    $appCountry-accent-dark: mat.define-palette($md-accent-dark,900);
+    $appCountry-warn-dark: mat.define-palette($md-warn-dark,900);
+    //Temas Dark
+    $appCountry-theme-dark: mat.define-dark-theme((
+      color: (
+        primary: $appCountry-primary-dark,
+        accent: $appCountry-accent-dark,
+        warn:$appCountry-warn-dark,
+      )
+    ));
+
+    @include mat.all-component-themes($appCountry-theme-dark);
+
+    mat-drawer-content{
+      background: map-get($Dark,  body-background );
+    }
+    mat-toolbar{
+      background: #0D0E12;
+    }
+}
 

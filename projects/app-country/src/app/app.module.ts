@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button'
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +18,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

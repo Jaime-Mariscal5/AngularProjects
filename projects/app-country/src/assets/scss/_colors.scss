@@ -1,7 +1,41 @@
 
 /* For use in src/lib/core/theming/_palette.scss */
-/* For use in src/lib/core/theming/_palette.scss */
 $md-mat-primary: (
+    50 : #fef4e1,
+    100 : #fee3b5,
+    200 : #fdd183,
+    300 : #fcbf51,
+    400 : #fbb12c,
+    500 : #faa307,
+    600 : #f99b06,
+    700 : #f99105,
+    800 : #f88804,
+    900 : #f67702,
+    A100 : #ffffff,
+    A200 : #fff3ea,
+    A400 : #ffd5b7,
+    A700 : #ffc79d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$md-mat-accent: (
     50 : #e0ebfc,
     100 : #b3cef8,
     200 : #80aef3,
@@ -35,22 +69,56 @@ $md-mat-primary: (
 );
 
 /* For use in src/lib/core/theming/_palette.scss */
+$md-mat-warn: (
+    50 : #f9e0e0,
+    100 : #f1b3b3,
+    200 : #e88080,
+    300 : #de4d4d,
+    400 : #d72626,
+    500 : #d00000,
+    600 : #cb0000,
+    700 : #c40000,
+    800 : #be0000,
+    900 : #b30000,
+    A100 : #ffdcdc,
+    A200 : #ffa9a9,
+    A400 : #ff7676,
+    A700 : #ff5d5d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+//paletas de colores dark
 /* For use in src/lib/core/theming/_palette.scss */
-$md-mat-accent: (
-    50 : #eaf5ea,
-    100 : #c9e7cb,
-    200 : #a6d7a8,
-    300 : #82c785,
-    400 : #67bb6a,
-    500 : #4caf50,
-    600 : #45a849,
-    700 : #3c9f40,
-    800 : #339637,
-    900 : #248627,
-    A100 : #c5ffc7,
-    A200 : #92ff95,
-    A400 : #5fff64,
-    A700 : #46ff4b,
+$md-primary-dark: (
+    50 : #edfdf6,
+    100 : #d1fae7,
+    200 : #b3f7d8,
+    300 : #94f4c8,
+    400 : #7df1bc,
+    500 : #66efb0,
+    600 : #5eeda9,
+    700 : #53eba0,
+    800 : #49e897,
+    900 : #38e487,
+    A100 : #ffffff,
+    A200 : #fafffc,
+    A400 : #c7ffe0,
+    A700 : #adffd1,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -58,6 +126,39 @@ $md-mat-accent: (
         300 : #000000,
         400 : #000000,
         500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+/* For use in src/lib/core/theming/_palette.scss */
+$md-accent-dark: (
+    50 : #f4e0ff,
+    100 : #e5b3fe,
+    200 : #d380fe,
+    300 : #c14dfd,
+    400 : #b426fc,
+    500 : #a700fc,
+    600 : #9f00fc,
+    700 : #9600fb,
+    800 : #8c00fb,
+    900 : #7c00fa,
+    A100 : #ffffff,
+    A200 : #f5edff,
+    A400 : #d8baff,
+    A700 : #caa1ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
         800 : #ffffff,
@@ -70,29 +171,29 @@ $md-mat-accent: (
 );
 
 /* For use in src/lib/core/theming/_palette.scss */
-$md-mat-warn: (
-    50 : #ffeaea,
-    100 : #ffcbcb,
-    200 : #ffa9a9,
-    300 : #ff8686,
-    400 : #ff6c6c,
-    500 : #ff5252,
-    600 : #ff4b4b,
-    700 : #ff4141,
-    800 : #ff3838,
-    900 : #ff2828,
+$md-warn-dark: (
+    50 : #ffe3e8,
+    100 : #ffb8c6,
+    200 : #ff89a1,
+    300 : #ff5a7b,
+    400 : #ff365e,
+    500 : #ff1342,
+    600 : #ff113c,
+    700 : #ff0e33,
+    800 : #ff0b2b,
+    900 : #ff061d,
     A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffd5d5,
-    A700 : #ffbcbc,
+    A200 : #fff3f4,
+    A400 : #ffc0c4,
+    A700 : #ffa7ac,
     contrast: (
         50 : #000000,
         100 : #000000,
         200 : #000000,
         300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
         700 : #ffffff,
         800 : #ffffff,
         900 : #ffffff,
@@ -108,20 +209,15 @@ $md-mat-warn: (
 
 
 
-/*
-Layouts Colors
-*/
 
 //DarkModule
-
-$Dark-theme:(
+$Dark:(
     body-background:#0A0A0A,
-    Sidenav-background:#141414,
     Allcards-background:#292929,
 );
 
-$Light-theme:(
+$Light:(
     body-background:#FCFCFC,
-    Sidenav-background:#141414,
     Allcards-background:#FFFFFF,
 )
+
