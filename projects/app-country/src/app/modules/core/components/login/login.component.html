@@ -1,0 +1,51 @@
+
+
+<div class="container">
+
+
+    <div class="logo">
+        <img src="../../../../../assets/images/logo-country.png" alt="logoApp">
+    </div>
+
+   
+    <span><h1>
+        Sign into your account
+    </h1></span>
+    
+    <form class="example-form" [formGroup]="fg">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput
+          formControlName ="email"
+                 placeholder="Ex. pat@example.com">
+                 <mat-error *ngIf="fg.get('email')?.hasError('required')"
+                 >Email is required</mat-error
+               >
+               <mat-error *ngIf="fg.get('email')?.hasError('pattern')"
+                 >Email must have email format</mat-error
+               >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput   formControlName ="password">
+          <mat-error>Password is Required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="button" color="primary"
+        (click)="login()"
+        >Login</button>
+      </form>
+
+      <!--
+        <div class="otherOptions">
+          <div>
+              <span>Forgot password?</span>
+          </div>
+          <div>
+  
+              <span>Forgot password?</span>
+          </div>
+        </div>
+    -->
+
+</div>

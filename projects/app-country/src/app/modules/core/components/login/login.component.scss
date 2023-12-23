@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    img{
+        display: block;
+        margin: auto;
+        width: 50%;
+    }
+
+    h1{
+        font-size: 2vw;
+    }
+
+    form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+
+        mat-form-field{
+            // margin-top: 15px;
+            margin-bottom: 15px;
+            mat-error{
+                font-size: 0.7rem ;
+                font-style: italic;
+            }
+        }
+        button{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .otherOptions{
+        margin-top: 10px;
+        display: flex;
+        div{
+            width: 50%;
+        }
+
+    }
+}

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { TagHistory } from '../../../modules/gifs/application/TagHistory.app';
-import { GifInfrestructure } from '../../../modules/gifs/infrestructure/gifs.infrestructure';
 
 @Component({
   selector: 'shared-sidebar',

@@ -1,0 +1,18 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between; // Esto distribuye los elementos a los lados opuestos
+    align-items: center; // Esto centra verticalmente los elementos
+  
+    // Estilo para el título
+    span:first-child {
+      order: -1; // Mueve el título al inicio
+      margin-right: auto; // Empuja los iconos a la derecha
+    }
+  
+    // Estilos para los iconos
+    button.mat-icon-button {
+      margin-left: 8px; // Espaciado entre los iconos
+    }
+  
+  }
+  
