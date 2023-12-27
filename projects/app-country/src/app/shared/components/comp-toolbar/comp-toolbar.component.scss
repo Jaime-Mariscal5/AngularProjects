@@ -1,18 +1,37 @@
+@import '../../../../assets/scss/mixins/mixins';
+
 mat-toolbar {
-    display: flex;
-    justify-content: space-between; // Esto distribuye los elementos a los lados opuestos
-    align-items: center; // Esto centra verticalmente los elementos
-  
-    // Estilo para el título
-    span:first-child {
-      order: -1; // Mueve el título al inicio
-      margin-right: auto; // Empuja los iconos a la derecha
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Estilo para el título
+  .layout-Title {
+    display: flex; // Esto asegura que los elementos dentro de layout-Title se alineen correctamente
+    align-items: center; // Esto centra verticalmente los elementos dentro de layout-Title
+    order: -1; // Mueve layout-Title al inicio
+    margin-right: auto; // Empuja los iconos a la derecha
+
+    img {
+      width: 30px;
+      margin-right: 8px; // Espaciado entre la imagen y el texto
     }
-  
-    // Estilos para los iconos
-    button.mat-icon-button {
-      margin-left: 8px; // Espaciado entre los iconos
+
+    span {
+      font-size: 2rem;
     }
-  
   }
-  
+
+  // Estilos para los iconos
+  button.mat-icon-button {
+    margin-left: 8px; // Espaciado entre los iconos
+  }
+
+  // Estilos para el botón de usuario
+  .user {
+    margin-left: 10px;
+    .infoUser {
+      @include icon-Text-style(10px);
+    }
+  }
+}

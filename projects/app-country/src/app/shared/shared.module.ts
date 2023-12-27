@@ -12,6 +12,8 @@ import { DemoButonsComponent } from './components/demo-butons/demo-butons.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
+import { TitleComponent } from './components/title/title.component';
 
 const PropAplication = [ToolbarApp ]; //agregfar clase application
 const PropInfrastructure = [];
@@ -20,7 +22,8 @@ const PropInfrastructure = [];
   declarations: [
     CompToolbarComponent,
     SidenavComponent,
-    DemoButonsComponent
+    DemoButonsComponent,
+    TitleComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -30,7 +33,9 @@ const PropInfrastructure = [];
     MatIconModule,
     MatSlideToggleModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatMenuModule,
+    TitleComponent
   ],
   exports:[
     CompToolbarComponent,

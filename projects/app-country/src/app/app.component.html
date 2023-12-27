@@ -1,5 +1,7 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened *ngIf="showMenu"  >Drawer content</mat-drawer>
+  <mat-drawer mode="side" opened *ngIf="showMenu"  >
+    <appC-menu></appC-menu>
+  </mat-drawer>
   <mat-drawer-content>
     <appC-comp-toolbar *ngIf="showHeader"></appC-comp-toolbar>
     <router-outlet></router-outlet>

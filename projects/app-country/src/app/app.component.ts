@@ -9,8 +9,8 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit{
   title = 'appCountry';
-  showMenu: boolean = false;
-  showHeader: boolean = false;
+  showMenu: boolean = true;
+  showHeader: boolean = true;
 
   //
  constructor(@Inject(DOCUMENT) private document:Document,private render:Renderer2){}

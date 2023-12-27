@@ -1,8 +1,30 @@
 <mat-toolbar>
-    <!--Simpre recibe un titulo -->
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <mat-slide-toggle (change)="onSlideToggleChange($event)">
-          <mat-icon>nights_stay</mat-icon>
-    </mat-slide-toggle>
+  <!--Simpre recibe un titulo -->
+  <div class="layout-Title">
+    <img src="../../../../assets/images/logo-country.png" alt="logoApp">
+    <span>Country App</span>
+  </div>
+
+  <span class="example-spacer"></span>
+  
+  <mat-slide-toggle (change)="onSlideToggleChange($event)">
+    <mat-icon>nights_stay</mat-icon>
+  </mat-slide-toggle>
+
+  <button class="user" mat-button [matMenuTriggerFor]="menu">
+    <div class="infoUser">
+      <span> UserName </span>
+      <mat-icon>expand_more</mat-icon>
+    </div>
+  </button>
+  
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <mat-icon>lock</mat-icon> Block session
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon> Logout
+      </button>
+  </mat-menu>
+
 </mat-toolbar>

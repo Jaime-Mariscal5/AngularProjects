@@ -1,0 +1,10 @@
+/**
+Archivo para definir todo tipo de Mixins
+**/
+
+// Definir un mixin con parámetros
+@mixin icon-Text-style($gap:15px) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

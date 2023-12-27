@@ -18,8 +18,8 @@ import { CoreModule } from './modules/core/core.module';
 
 ///
 const routes:Routes = [
-  {path:"",component:PageLoginComponent},
-  {path:'test',component:DemoButonsComponent},
+  //{path:"",component:PageLoginComponent},
+  {path:'',component:DemoButonsComponent},
 ]
 @NgModule({
   declarations: [
@@ -29,11 +29,6 @@ const routes:Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    // MatToolbarModule,
-    // MatIconModule,
-    // MatTooltipModule,
-    // MatButtonModule,
-   // MatSlideToggleModule,
    RouterModule.forRoot(routes),
    SharedModule,
    CoreModule

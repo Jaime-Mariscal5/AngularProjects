@@ -11,12 +11,20 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+
+//directives
+import { CapsLockDirective } from './directives/capsLock.directive';
+import { MenuComponent } from './components/menu/menu.component';
+
 export function playerFactory(){
   return import('lottie-web');
 }
 
 @NgModule({
-  declarations: [PageLoginComponent, LoginComponent],
+  declarations: [PageLoginComponent, LoginComponent ,
+     CapsLockDirective, MenuComponent],
   imports: [
     CommonModule,
     LottieModule.forRoot({player:playerFactory}),
@@ -24,7 +32,10 @@ export function playerFactory(){
     MatFormFieldModule,
     MatButtonModule,
     RouterModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatListModule,
+    MatIconModule
+  ],
+  exports:[MenuComponent]
 })
 export class CoreModule { }
