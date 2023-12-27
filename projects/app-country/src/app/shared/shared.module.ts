@@ -35,7 +35,7 @@ const PropInfrastructure = [];
     MatButtonModule,
     MatTooltipModule,
     MatMenuModule,
-    TitleComponent
+   // TitleComponent
   ],
   exports:[
     CompToolbarComponent,

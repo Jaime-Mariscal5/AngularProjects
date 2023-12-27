@@ -10,8 +10,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 //modulos
 import { SharedModule } from './shared/shared.module';
 import { DemoButonsComponent } from './shared/components/demo-butons/demo-butons.component';
-import { PageLoginComponent } from './modules/core/pages/page-login/page-login.component';
 import { CoreModule } from './modules/core/core.module';
+
+import { RegionComponent } from './modules/region/infrestructure/presentation/components/region/region.component';
+import { CapitalComponent } from './modules/capital/infrestructure/presentation/components/capital/capital.component';
+import { PaisComponent } from './modules/pais/infrestructure/presentation/components/pais/pais.component';
 
 
 
@@ -19,7 +22,10 @@ import { CoreModule } from './modules/core/core.module';
 ///
 const routes:Routes = [
   //{path:"",component:PageLoginComponent},
-  {path:'',component:DemoButonsComponent},
+  {path:'capital',component:CapitalComponent},
+  {path:'region',component:RegionComponent},
+  {path:'pais',component:PaisComponent},
+  {path:'test',component:DemoButonsComponent},
 ]
 @NgModule({
   declarations: [
