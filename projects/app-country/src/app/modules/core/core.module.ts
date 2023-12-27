@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 //directives
 import { CapsLockDirective } from './directives/capsLock.directive';
 import { MenuComponent } from './components/menu/menu.component';
+import { PaisModule } from '../pais/infrestructure/presentation/pais.module';
 
 export function playerFactory(){
   return import('lottie-web');
@@ -34,7 +35,8 @@ export function playerFactory(){
     RouterModule,
     ReactiveFormsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    PaisModule
   ],
   exports:[MenuComponent]
 })

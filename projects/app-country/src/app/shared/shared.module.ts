@@ -15,6 +15,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import { TitleComponent } from './components/title/title.component';
 
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+
 const PropAplication = [ToolbarApp ]; //agregfar clase application
 const PropInfrastructure = [];
 
@@ -23,7 +25,8 @@ const PropInfrastructure = [];
     CompToolbarComponent,
     SidenavComponent,
     DemoButonsComponent,
-    TitleComponent
+    TitleComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -40,7 +43,8 @@ const PropInfrastructure = [];
   exports:[
     CompToolbarComponent,
     SidenavComponent,
-    DemoButonsComponent
+    DemoButonsComponent,
+    SearchBoxComponent
   ],
   providers: [...PropAplication],
 })

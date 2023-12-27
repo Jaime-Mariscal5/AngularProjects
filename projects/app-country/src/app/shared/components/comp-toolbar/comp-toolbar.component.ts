@@ -17,8 +17,6 @@ export class CompToolbarComponent {
     ){}
 
   onSlideToggleChange(event: any) {
-    // Manejar el evento de cambio aquí
-   // console.log('Slide toggle cambió:', event.checked);
    this.toolbar.ChangeTheme(event);
     if(event.checked) {
       this.render.removeClass(this.document.body, 'light-theme')

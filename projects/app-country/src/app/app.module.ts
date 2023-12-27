@@ -17,7 +17,8 @@ import { CapitalComponent } from './modules/capital/infrestructure/presentation/
 import { PaisComponent } from './modules/pais/infrestructure/presentation/components/pais/pais.component';
 
 
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 ///
 const routes:Routes = [
@@ -35,6 +36,8 @@ const routes:Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
    RouterModule.forRoot(routes),
    SharedModule,
    CoreModule

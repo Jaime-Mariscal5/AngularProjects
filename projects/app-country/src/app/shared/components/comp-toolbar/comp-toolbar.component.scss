@@ -18,7 +18,7 @@ mat-toolbar {
     }
 
     span {
-      font-size: 2rem;
+      font-size: 2vw;
     }
   }
 
@@ -34,4 +34,19 @@ mat-toolbar {
       @include icon-Text-style(10px);
     }
   }
+
+  // Media query para tablets
+@media screen and (max-width: 600px) {
+  // Estilo para el título
+  .layout-Title {
+
+    span {
+      font-size: 2vw;
+    }
+  }
+
 }
+}
+
+
+
