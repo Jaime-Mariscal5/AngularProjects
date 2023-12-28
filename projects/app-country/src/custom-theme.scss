@@ -32,7 +32,10 @@
   }
 
   mat-card-content{
-    @extend .radius-card
+    @extend .radius-card;
+  }
+  mat-card {
+    @extend .radius-card;
   }
 }
 

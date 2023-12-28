@@ -18,18 +18,11 @@ export class TitleComponent {
     private readonly menuService:MenuService,
     private readonly activatedRoute: ActivatedRoute
     ){
-     // console.log(this.activatedRoute);
-     // console.log(this.activatedRoute.snapshot);
-     // console.log(this.activatedRoute.snapshot.pathFromRoot[1]);
       const currentPath = '/' + this.activatedRoute.snapshot.pathFromRoot[1].routeConfig?.path;
-     // console.log(currentPath);
       const menuItems = this.menuService.getOptionMenu(),
       menuItem = menuItems.find((item)=> item.path == currentPath);
-     // console.log(menuItem);
       if(menuItem){
-        this.title = menuItem.title;
+        this.title = "Por " + menuItem.title;
       }
-      
     }
-
 }
