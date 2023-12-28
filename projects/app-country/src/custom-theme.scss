@@ -2,6 +2,7 @@
 
 @use '@angular/material' as mat;
 @import './assets/scss/colors';
+@import './assets/scss/globalStyle';
 @include mat.core();
 
 
@@ -29,6 +30,10 @@
   mat-toolbar{
     background: map-get($Light, Allcards-background );
   }
+
+  mat-card-content{
+    @extend .radius-card
+  }
 }
 
 .dark-theme {
@@ -54,6 +59,11 @@
     mat-toolbar{
       background: #0D0E12;
     }
+    mat-card-content{
+      background: #15171C;
+      @extend .radius-card
+    }
+
 }
 
 .light-theme mat-toolbar,

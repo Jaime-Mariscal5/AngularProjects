@@ -38,13 +38,13 @@ const PropInfrastructure = [];
     MatButtonModule,
     MatTooltipModule,
     MatMenuModule,
-   // TitleComponent
   ],
   exports:[
     CompToolbarComponent,
     SidenavComponent,
     DemoButonsComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    TitleComponent
   ],
   providers: [...PropAplication],
 })

@@ -1,0 +1,31 @@
+
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  
+    // Estilo para el título
+    .layout-Title {
+      display: flex; // Esto asegura que los elementos dentro de layout-Title se alineen correctamente
+      align-items: center; // Esto centra verticalmente los elementos dentro de layout-Title
+      order: -1; // Mueve layout-Title al inicio
+      margin-right: auto; // Empuja los iconos a la derecha
+      h1{
+        font-weight: 600!important;
+        font-size: calc(1.26rem + .12vw)!important;
+      }
+
+    }
+    .btn-area {
+        display: flex;
+        button {
+          margin-left: 5px;
+          &:first-child {
+            margin-left: 0; // No agregar margen al primer elemento
+          }
+        }
+      }
+  }
+  
