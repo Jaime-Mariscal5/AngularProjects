@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class RegionComponent {
 
+  PlaceHolderRegion:string = 'Buscar por Region';
+
 }

@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './pais.component.html',
   styleUrls: ['./pais.component.scss']
 })
-export class PaisComponent {}
+export class PaisComponent {
+  PlaceHolderCountry:string = 'Buscar por País';
+}

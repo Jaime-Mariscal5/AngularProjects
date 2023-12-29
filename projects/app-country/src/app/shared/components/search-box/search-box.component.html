@@ -1,2 +1,16 @@
-<p>search-box works!</p>
-<input type="text">
+
+<!--<mat-form-field class="example-full-width">
+ <mat-label>{{DatPlaceholder}}</mat-label>
+    <input matInput 
+    [(ngModel)]="datoHijo"
+    placeholder="Buscar...">
+</mat-form-field> -->
+
+<mat-form-field class="example-full-width">
+    <mat-label>{{DatPlaceholder}}</mat-label>
+    <input matInput 
+    #txtsearchInput
+    (keyup.enter)="emitValue( txtsearchInput.value )"
+    placeholder="Buscar...">
+</mat-form-field>
+

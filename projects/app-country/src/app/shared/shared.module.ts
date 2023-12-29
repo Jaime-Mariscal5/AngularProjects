@@ -9,6 +9,9 @@ import { TitleComponent } from './components/title/title.component';
 
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { MaterialModule } from '../modules/material/material.module';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const PropAplication = [ToolbarApp ]; //agregfar clase application
 const PropInfrastructure = [];
@@ -24,6 +27,9 @@ const PropInfrastructure = [];
   imports: [
     MaterialModule,
     CommonModule,    
+    // FormsModule, // Asegúrate de que FormsModule está importado
+    // MatInputModule,
+    // MatFormFieldModule,
   ],
   exports:[
     CompToolbarComponent,
