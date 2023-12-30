@@ -9,6 +9,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 
+//table
+import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatTableModule} from '@angular/material/table';
+
 
 // Importa otros componentes de Angular Material que desees utilizar
 
@@ -22,7 +26,8 @@ const materialModules = [
   MatSlideToggleModule,
   MatTooltipModule,
   MatMenuModule,
-  // Agrega otros módulos de Angular Material aquí
+  MatPaginatorModule,
+   MatTableModule
 ];
 
 @NgModule({

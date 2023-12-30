@@ -1,4 +1,4 @@
-export interface Capital {
+export interface InterCapital {
     name:         Name;
     tld:          string[];
     cca2:         string;

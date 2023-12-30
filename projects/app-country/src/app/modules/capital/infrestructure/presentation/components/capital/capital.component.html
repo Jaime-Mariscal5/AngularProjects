@@ -1,11 +1,11 @@
-
 <shared-title></shared-title>
 
 <mat-card>
-    <mat-card-content>
-        <!-- (enterPresionado)="onEnterPresionado($event)" -->
-        <shared-search-box 
-      (onValue)="searchByCapital($event)"
-        [DatPlaceholder]="PlaceHolderCap"></shared-search-box>
-    </mat-card-content>
+  <mat-card-content>
+    <shared-search-box
+      (onValue)="searchCapital($event)"
+      [DatPlaceholder]="PlaceHolderCap"
+    ></shared-search-box>
+    <shared-table></shared-table>
+  </mat-card-content>
 </mat-card>

@@ -1,16 +1,9 @@
-
-<!--<mat-form-field class="example-full-width">
- <mat-label>{{DatPlaceholder}}</mat-label>
-    <input matInput 
-    [(ngModel)]="datoHijo"
-    placeholder="Buscar...">
-</mat-form-field> -->
-
 <mat-form-field class="example-full-width">
-    <mat-label>{{DatPlaceholder}}</mat-label>
-    <input matInput 
+  <mat-label>{{ DatPlaceholder }}</mat-label>
+  <input
+    matInput
     #txtsearchInput
-    (keyup.enter)="emitValue( txtsearchInput.value )"
-    placeholder="Buscar...">
+    (keyup.enter)="emitValue(txtsearchInput.value)"
+    placeholder="Buscar..."
+  />
 </mat-form-field>
-

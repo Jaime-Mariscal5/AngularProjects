@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchCap } from '../../../../application/search-Cap.app';
 
 @Component({
   selector: 'appC-capital',
@@ -7,14 +8,15 @@ import { Component } from '@angular/core';
 })
 export class CapitalComponent {
 
-  PlaceHolderCap:string = 'Buscar por Capital';
-  // onEnterPresionado(valor: string) {
-  //   console.log('padre Capital ejecutando', valor);
-  // }
+  PlaceHolderCap: string = 'Buscar por Capital';
+  constructor(private searchCap:SearchCap){}
 
-  searchByCapital(term:string){
-    console.log('Desde ByCapitalPage');
-    console.log(term);
+  searchCapital(term: string) {
+    console.log("aHolaaaaaa");
+    console.log('Desde ByCapitalPage:', term);
+    this.searchCap.execute(term);
+    console.log(this.searchCap.execute(term));
   }
 
 }
+//hola usted es la apetochha vddd
