@@ -1,3 +1,41 @@
 mat-form-field{
     width: 100%;
+    input.mat-input {
+        // Aquí puedes aplicar tus estilos personalizados al input
+        display: block;
+       // width: 100%;
+        padding: 0.775rem 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #9A9CAE;
+        appearance: none;
+        background-color: #1B1C22;
+        background-clip: padding-box;
+        border: 1px solid #363843;
+        border-radius: 0.475rem;
+      }
 }
+
+
+
+// Asegúrate de que este selector sea lo suficientemente específico para afectar solo el input que deseas
+// mat-form-field.example-full-width {
+//   input.mat-input {
+//     // Aquí puedes aplicar tus estilos personalizados al input
+//     display: block;
+//     width: 100%;
+//     padding: 0.775rem 1rem;
+//     font-size: 1.1rem;
+//     font-weight: 500;
+//     line-height: 1.5;
+//     color: #9A9CAE;
+//     appearance: none;
+//     background-color: #1B1C22;
+//     background-clip: padding-box;
+//     border: 1px solid #363843;
+//     border-radius: 0.475rem;
+//   }
+// }
+
+

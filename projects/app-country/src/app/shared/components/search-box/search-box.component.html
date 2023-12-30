@@ -1,9 +1,17 @@
-<mat-form-field class="example-full-width">
-  <mat-label>{{ DatPlaceholder }}</mat-label>
-  <input
-    matInput
-    #txtsearchInput
-    (keyup.enter)="emitValue(txtsearchInput.value)"
-    placeholder="Buscar..."
-  />
-</mat-form-field>
+
+<!--  
+
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ DatPlaceholder }}</mat-label>
+    <input
+      matInput
+      #txtsearchInput
+      (keyup.enter)="emitValue(txtsearchInput.value)"
+      placeholder="Buscar..."
+    />
+  </mat-form-field>
+-->
+<input matInput type="text" name="searchBox"
+(keyup.enter)="emitValue(txtsearchInput.value)"
+placeholder="{{ DatPlaceholder }}"
+ #txtsearchInput class="input-style">

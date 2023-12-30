@@ -25,3 +25,24 @@
     border: 1px solid #363843;
     border-radius: 0.475rem;
 }
+
+.search-style {
+    display: block;
+    width: 80%;
+    padding: 0.775rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    appearance: none;
+    background-clip: padding-box;
+    border-radius: 0.475rem;
+   // color: #9a9cae;
+   // background-color: #1b1c22;
+   // border: 1px solid #363843;
+  
+    &:focus {
+      outline: none; // Para eliminar el contorno predeterminado del foco
+      border: 0; // Elimina el borde cuando está enfocado
+     // background-color: #26272f;
+    }
+  }

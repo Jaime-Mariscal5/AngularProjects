@@ -1,72 +1,109 @@
-
-
-@use '@angular/material' as mat;
-@import './assets/scss/colors';
-@import './assets/scss/globalStyle';
+@use "@angular/material" as mat;
+@import "./assets/scss/colors";
+@import "./assets/scss/globalStyle";
 @include mat.core();
-
-
-
-
 
 // Incluir los temas en componentes específicos
 .light-theme {
-  $appCountry-primary-light: mat.define-palette($md-mat-primary,500);
-  $appCountry-accent-light: mat.define-palette($md-mat-accent,500);
-  $appCountry-warn-light: mat.define-palette($md-mat-warn,500);
+  $appCountry-primary-light: mat.define-palette($md-mat-primary, 500);
+  $appCountry-accent-light: mat.define-palette($md-mat-accent, 500);
+  $appCountry-warn-light: mat.define-palette($md-mat-warn, 500);
 
   //Tema Light
-  $appCountry-theme-light: mat.define-light-theme((
-    color: (
-      primary: $appCountry-primary-light,
-      accent: $appCountry-accent-light,
-      warn: $appCountry-warn-light,
+  $appCountry-theme-light: mat.define-light-theme(
+    (
+      color: (
+        primary: $appCountry-primary-light,
+        accent: $appCountry-accent-light,
+        warn: $appCountry-warn-light,
+      ),
     )
-  ));
+  );
+
+  $color-input-search: "";
+
   @include mat.all-component-themes($appCountry-theme-light);
-  mat-drawer-content{
-    background: map-get($Light,  body-background );
+  mat-drawer-content {
+    background: map-get($Light, body-background);
   }
-  mat-toolbar{
-    background: map-get($Light, Allcards-background );
+  mat-toolbar {
+    background: map-get($Light, Allcards-background);
   }
 
-  mat-card-content{
+  mat-card-content {
     @extend .radius-card;
   }
   mat-card {
     @extend .radius-card;
   }
+
+  .input-style {
+    @extend .search-style;
+    //colores
+    color: map-get($inputs-color, color-light);
+    background-color: map-get($inputs-color, background-light);
+    border: 1px solid map-get($inputs-color, border-light);
+    &:focus {
+      background-color: map-get($inputs-color, focus-light);
+    }
+  }
 }
 
 .dark-theme {
- 
-    //palesa de colores darks
-    $appCountry-primary-dark: mat.define-palette($md-primary-dark,900);
-    $appCountry-accent-dark: mat.define-palette($md-accent-dark,900);
-    $appCountry-warn-dark: mat.define-palette($md-warn-dark,900);
-    //Temas Dark
-    $appCountry-theme-dark: mat.define-dark-theme((
+  //palesa de colores darks
+  $appCountry-primary-dark: mat.define-palette($md-primary-dark, 900);
+  $appCountry-accent-dark: mat.define-palette($md-accent-dark, 900);
+  $appCountry-warn-dark: mat.define-palette($md-warn-dark, 900);
+  //Temas Dark
+  $appCountry-theme-dark: mat.define-dark-theme(
+    (
       color: (
         primary: $appCountry-primary-dark,
         accent: $appCountry-accent-dark,
-        warn:$appCountry-warn-dark,
-      )
-    ));
+        warn: $appCountry-warn-dark,
+      ),
+    )
+  );
 
-    @include mat.all-component-themes($appCountry-theme-dark);
+  @include mat.all-component-themes($appCountry-theme-dark);
 
-    mat-drawer-content{
-      background: map-get($Dark,  body-background );
-    }
-    mat-toolbar{
-      background: #0D0E12;
-    }
-    mat-card-content{
-      background: #15171C;
-      @extend .radius-card
-    }
+  mat-drawer-content {
+    background: map-get($Dark, body-background);
+  }
+  mat-toolbar {
+    background: #0d0e12;
+  }
+  mat-card-content {
+    background: #15171c;
+    @extend .radius-card;
+  }
 
+  .input-style {
+    @extend .search-style;
+    //colores
+    color: map-get($inputs-color, color-dark);
+    background-color: map-get($inputs-color, background-dark);
+    border: 1px solid map-get($inputs-color, border-dark);
+    &:focus {
+      background-color: map-get($inputs-color, focus-dark);
+    }
+  }
+}
+
+.dark-theme .mat-elevation-z8,
+.dark-theme .mat-mdc-elevation-specific.mat-elevation-z8 {
+  box-shadow: none !important;
+}
+
+/* También puedes intentar con el selector específico */
+.dark-theme .mat-elevation-z8.mat-card,
+.dark-theme .mat-mdc-elevation-specific.mat-elevation-z8.mat-card {
+  box-shadow: none !important;
+}
+
+.mat-mdc-table,
+.mat-mdc-paginator {
+  background-color: transparent !important;
 }
 
 .light-theme mat-toolbar,
@@ -85,6 +122,4 @@
   button.mat-icon-button {
     margin-left: 8px; // Espaciado entre los iconos
   }
-
 }
-
