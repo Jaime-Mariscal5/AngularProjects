@@ -6,12 +6,14 @@ import { RegionComponent } from './modules/region/infrestructure/presentation/co
 import { CapitalComponent } from './modules/capital/infrestructure/presentation/components/capital/capital.component';
 import { PaisComponent } from './modules/pais/infrestructure/presentation/components/pais/pais.component';
 import { DemoButonsComponent } from './shared/components/demo-butons/demo-butons.component';
+import { PageLoginComponent } from './modules/core/pages/page-login/page-login.component';
 
 ///Rutas principales
 /**
  * Manera recomendada de usar las rutas
  */
 const routes:Routes = [
+  {path:'login',component:PageLoginComponent},
   {path:'capital',
   loadChildren: () => import('./modules/capital/infrestructure/capital.module').then(m => m.CapitalModule)
   },

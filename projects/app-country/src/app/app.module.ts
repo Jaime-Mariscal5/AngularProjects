@@ -9,8 +9,11 @@ import { CoreModule } from './modules/core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 //angular material
 import { MaterialModule } from './modules/material/material.module';
+//Layout
+import { LayoutModule } from './config/modules/Layout/layout.module';
+import { Ilayout } from './config/modules/Layout/layout.interface';
 
-
+const layout_Config:Ilayout = {showMenu:false,showHeader:false} //variable para show module
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +24,8 @@ import { MaterialModule } from './modules/material/material.module';
     MaterialModule,
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    LayoutModule.forRoot(layout_Config)
   ],
   providers: [],
   bootstrap: [AppComponent]

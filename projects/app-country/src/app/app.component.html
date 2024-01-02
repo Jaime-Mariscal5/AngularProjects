@@ -1,12 +1,14 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer [mode]="isHandset ? 'over' : 'side'" [opened]="!isHandset">
+  <mat-drawer *ngIf="showMenu" [mode]="isHandset ? 'over' : 'side'" [opened]="!isHandset">
     <appC-menu></appC-menu>
   </mat-drawer>
   <mat-drawer-content>
     <appC-comp-toolbar *ngIf="showHeader"></appC-comp-toolbar>
-    <button class="icon-menu" mat-icon-button (click)="toggleDrawer()">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <!--
+      <button class="icon-menu" mat-icon-button (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    -->
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

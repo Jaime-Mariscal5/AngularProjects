@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { layoutService } from 'projects/app-country/src/app/config/modules/Layout/layout.service';
 
 @Component({
   selector: 'appC-pais',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class PaisComponent {
   PlaceHolderCountry:string = 'Buscar por País';
+  constructor(private readonly layoutS:layoutService){
+      layoutS.configuration = { showMenu: true, showHeader: true };
+    }
+
+
 }

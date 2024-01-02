@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchCap } from '../../../../application/search-Cap.app';
+import { layoutService } from 'projects/app-country/src/app/config/modules/Layout/layout.service';
 
 @Component({
   selector: 'appC-capital',
@@ -9,7 +10,11 @@ import { SearchCap } from '../../../../application/search-Cap.app';
 export class CapitalComponent {
 
   PlaceHolderCap: string = 'Buscar por Capital';
-  constructor(private searchCap:SearchCap){}
+  constructor(private searchCap:SearchCap,
+    private readonly layoutS:layoutService,
+    ){
+      layoutS.configuration = { showMenu: true, showHeader: true };
+    }
 
   searchCapital(term: string) {
     console.log("aHolaaaaaa");

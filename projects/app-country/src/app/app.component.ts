@@ -3,6 +3,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { DOCUMENT } from '@angular/common';
+import { layoutService } from './config/modules/Layout/layout.service';
+import { Ilayout } from './config/modules/Layout/layout.interface';
 
 @Component({
   selector: 'appC-root',
@@ -11,8 +13,9 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit{
   title = 'appCountry';
-  showMenu: boolean = true;
-  showHeader: boolean = true;
+  //agregar valores por defecto 
+  showMenu: boolean = false;
+  showHeader: boolean = false;
   isHandset: boolean = false;
 
 
@@ -20,7 +23,15 @@ export class AppComponent implements OnInit{
  constructor(
   @Inject(DOCUMENT) private document:Document,
   private render:Renderer2,
-  private breakpointObserver: BreakpointObserver){}
+  private breakpointObserver: BreakpointObserver,
+  private readonly layoutS:layoutService){
+    // this.showMenu = layoutS.showMenu;
+    // this.showHeader = layoutS.showHeader;
+    this.layoutS.configuration.subscribe((layout: Ilayout) => {
+      this.showMenu = layout.showMenu;
+      this.showHeader = layout.showHeader;
+    });
+  }
   ngOnInit(): void {
    this.render.addClass(this.document.body, 'dark-theme');
    this.breakpointObserver.observe([Breakpoints.Handset])
@@ -33,17 +44,4 @@ export class AppComponent implements OnInit{
   toggleDrawer() {
     this.isHandset = !this.isHandset;
   }
-
-
-  // onSlideToggleChange(event: any) {
-  //   // Manejar el evento de cambio aquí
-  //   console.log('Slide toggle cambió:', event.checked);
-  //   if(event.checked) {
-  //     this.render.removeClass(this.document.body, 'light-theme')
-  //     this.render.addClass(this.document.body, 'dark-theme')
-  //   }else{
-  //     this.render.removeClass(this.document.body, 'dark-theme')
-  //     this.render.addClass(this.document.body, 'light-theme')
-  //   }
-  // }
 }

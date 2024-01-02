@@ -29,7 +29,7 @@ export class LoginComponent {
     //por componentes declarados en las rotas
    // this.router.navigate(['test']);
    if(this.fg.valid){
-    this.router.navigate(['test']);
+    this.router.navigate(['capital']);
    }
    console.log(this.fg);
   }
@@ -64,7 +64,7 @@ export class LoginComponent {
       if (!email) return null;
 
       const domain = email.split('@')[1];
-      if (!filterDomains.includes(domain)) return null;
+      if (filterDomains.includes(domain)) return null;
 
       return { filterDomains };
     };
