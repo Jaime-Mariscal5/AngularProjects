@@ -36,7 +36,6 @@ export class AppComponent implements OnInit{
    this.render.addClass(this.document.body, 'dark-theme');
    this.breakpointObserver.observe([Breakpoints.Handset])
       .subscribe(result => {
-        console.log(result);
         this.isHandset = result.matches;
       });
   }

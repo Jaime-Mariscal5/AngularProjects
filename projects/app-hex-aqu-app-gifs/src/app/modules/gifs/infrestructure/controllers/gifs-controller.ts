@@ -10,9 +10,6 @@ export class GifsController {
     async run(req:Request , res:Response){
         //const msn = req.params.ST
         const msn =  req;
-        console.log(req, msn);
-        console.log(req.params);
-        console.log("Aun no entiendo ");
         await this.ST.execute("Test");
     }
 }

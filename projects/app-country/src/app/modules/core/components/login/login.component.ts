@@ -31,7 +31,6 @@ export class LoginComponent {
    if(this.fg.valid){
     this.router.navigate(['capital']);
    }
-   console.log(this.fg);
   }
 
   createFormLogin() {

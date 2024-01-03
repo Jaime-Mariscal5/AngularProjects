@@ -22,7 +22,7 @@ const routes:Routes = [
 },
   // lazy load - 
   {path:'pais',
-    loadChildren: () => import('./modules/pais/infrestructure/presentation/pais.module').then(m => m.PaisModule)
+    loadChildren: () => import('./modules/pais/infrestructure/pais.module').then(m => m.PaisModule)
   },
   {path:'test',component:DemoButonsComponent},
   {path:'**',redirectTo:'test'},

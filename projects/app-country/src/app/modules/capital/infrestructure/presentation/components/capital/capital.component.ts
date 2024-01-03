@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SearchCap } from '../../../../application/search-Cap.app';
 import { layoutService } from 'projects/app-country/src/app/config/modules/Layout/layout.service';
 import { showCapital } from '../../../../application/show-capital.app';
-import { Capital } from '../../../../domain/capital';
 import { InterCapital } from '../../../../domain/interfaces/capital.interface';
 
 @Component({
@@ -15,7 +14,8 @@ export class CapitalComponent {
   NotFound:boolean = false;
   PlaceHolderCap: string = 'Buscar por Capital';
   data:InterCapital[] = [];
-  constructor(private searchCap:SearchCap,
+  constructor(
+    private searchCap:SearchCap,
     private readonly layoutS:layoutService,
     private showCap:showCapital
     ){
@@ -37,7 +37,6 @@ export class CapitalComponent {
 
   searchCapital(term: string) {
     this.searchCap.execute(term);
-    console.log(this.searchCap.execute(term));
   }
 
 }

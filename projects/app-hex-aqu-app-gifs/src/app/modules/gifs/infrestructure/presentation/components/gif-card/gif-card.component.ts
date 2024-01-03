@@ -14,9 +14,4 @@ export class GifCardComponent implements OnInit{
     // throw new Error('Method not implemented.');
     if(!this.gif) throw new Error('Method not implemented.');
   }
-  // constructor(gif: Girfs) {
-  //   this.gif = gif;
-  //   console.log(this.gif)
-  // }
-
 }

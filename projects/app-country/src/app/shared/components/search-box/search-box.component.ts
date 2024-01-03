@@ -11,7 +11,6 @@ export class SearchBoxComponent {
 
   emitValue(value:string){
     this.onValue.emit(value);
-    console.log('Emitiendo desde hijo:', value);
   }
 
 }

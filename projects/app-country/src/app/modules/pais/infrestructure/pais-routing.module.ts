@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PaisComponent } from './components/pais/pais.component';
+import { PaisComponent } from './presentation/components/pais/pais.component';
 //component4es 
 
 ///Rutas principales

@@ -13,9 +13,7 @@ export class SearchCap {
     }
     execute(str:string){
         if(str.length === 0) return;
-        console.log(this.capitalRepo.getCapital(str));
         this.capitalRepo.getCapital(str).subscribe(( capitals ) => {
-            console.log(capitals);
           this.showC.sendCapitals(capitals);
         });
     }

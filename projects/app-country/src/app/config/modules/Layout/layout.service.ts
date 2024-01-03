@@ -13,8 +13,6 @@ export class layoutService {
    * 1.Injectar el token creado
    */
   constructor(@Inject(Layout_Token) private Layout: Ilayout) {
-    console.log('LayoutService constructor');
-    console.log('LayoutService layout: ', Layout);
     this.showMenu = Layout.showMenu;
     this.showHeader = Layout.showHeader;
     this.configRx = new BehaviorSubject<Ilayout>(Layout); // es igual a una instancia de BehaviorSubject y mandamos Layout

@@ -13,7 +13,6 @@ export class HomePageComponent {
   ngOnInit() {
     
     this.showT.getGifs().subscribe((gifs)=>{
-      console.log("Gifs recibidos componente card");
       this.gifs = gifs
     })
   }
