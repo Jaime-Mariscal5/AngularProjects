@@ -6,6 +6,8 @@
       (onValue)="searchCapital($event)"
       [DatPlaceholder]="PlaceHolderCap"
     ></shared-search-box>
-    <shared-table></shared-table>
+    <shared-not-found *ngIf="NotFound"></shared-not-found>
+    <shared-table  [data]="data" *ngIf="!NotFound"></shared-table>
+
   </mat-card-content>
 </mat-card>

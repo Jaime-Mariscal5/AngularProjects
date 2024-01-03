@@ -7,10 +7,11 @@ import { CapitalRoutingModule } from './capital.routing.module';// rutas hijas
 import { SearchCap } from '../application/search-Cap.app';
 import { capitalInfrestructure } from './capital.infrastructure';
 import { HttpClientModule } from '@angular/common/http';
+import { showCapital } from '../application/show-capital.app';
 
 
 //clases de capas
-const PropAplication = [ SearchCap ]; //agregfar clase application
+const PropAplication = [ SearchCap , showCapital]; //agregfar clase application
 const PropInfrastructure = [capitalInfrestructure];
 @NgModule({
   declarations: [CapitalComponent],

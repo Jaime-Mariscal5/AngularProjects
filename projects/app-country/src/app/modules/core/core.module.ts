@@ -28,7 +28,7 @@ export function playerFactory(){
      CapsLockDirective, MenuComponent],
   imports: [
     CommonModule,
-    LottieModule.forRoot({player:playerFactory}),
+    LottieModule.forRoot({player:playerFactory}),// animation
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,

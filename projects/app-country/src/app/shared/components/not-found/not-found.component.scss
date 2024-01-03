@@ -1,0 +1,22 @@
+.contentNotFound-Area {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  // Centra los elementos a lo largo del eje transversal (vertical en este caso)
+    //height: 100vh;  // Ajusta la altura al 100% de la ventana de visualización
+  
+    .title-area {
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 900;
+      }
+    }
+  
+    .animation-area {
+      width: 80%;  // Ajusta el ancho máximo según sea necesario
+      max-width: 600px;  // Puedes establecer un máximo para evitar que sea demasiado ancho
+      margin: auto;  // Centra el área de animación horizontalmente
+    }
+  }
+  

@@ -6,10 +6,10 @@ import { Observable, Subject } from "rxjs";
 @Injectable()
 export class showTag{
 
-    private gifsSubject = new Subject<Girfs[]>();
+    private gifsSubject = new Subject<Girfs[]>();// ? 
 
     sendGifs(gifs:Girfs[]){
-        this.gifsSubject.next(gifs);
+        this.gifsSubject.next(gifs); //recibe la data 
     }
 
     getGifs(): Observable<Girfs[]>{
