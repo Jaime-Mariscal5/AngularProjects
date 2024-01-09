@@ -12,6 +12,8 @@ import { MatMenuModule } from '@angular/material/menu';
 //table
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule} from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 // Importa otros componentes de Angular Material que desees utilizar
@@ -27,7 +29,9 @@ const materialModules = [
   MatTooltipModule,
   MatMenuModule,
   MatPaginatorModule,
-   MatTableModule
+   MatTableModule,
+   MatListModule,
+   MatFormFieldModule
 ];
 
 @NgModule({

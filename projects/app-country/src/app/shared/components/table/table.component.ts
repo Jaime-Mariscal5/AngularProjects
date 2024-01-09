@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import { InterCapital } from '../../../modules/capital/domain/interfaces/capital.interface';
 @Component({
   selector: 'shared-table',
   templateUrl: './table.component.html',
@@ -20,7 +19,6 @@ export class TableComponent<T> implements AfterViewInit{
       this.dataSource.data = this.data;
     }
   }
-
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;

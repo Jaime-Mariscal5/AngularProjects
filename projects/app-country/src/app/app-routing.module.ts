@@ -1,37 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//component4es 
-import { RegionComponent } from './modules/region/infrestructure/presentation/components/region/region.component';
-import { CapitalComponent } from './modules/capital/infrestructure/presentation/components/capital/capital.component';
-import { PaisComponent } from './modules/pais/infrestructure/presentation/components/pais/pais.component';
+//component4es
 import { DemoButonsComponent } from './shared/components/demo-butons/demo-butons.component';
 import { PageLoginComponent } from './modules/core/pages/page-login/page-login.component';
+import { CountryPageComponent } from './modules/core/pages/country-page/country-page.component';
+
+import { CapitalComponent } from './modules/core/components/capital/capital.component';
+import { RegionComponent } from './modules/core/components/region/region.component';
+import { PaisComponent } from './modules/core/components/pais/pais.component';
 
 ///Rutas principales
 /**
  * Manera recomendada de usar las rutas
  */
-const routes:Routes = [
-  {path:'login',component:PageLoginComponent},
-  {path:'capital',
-  loadChildren: () => import('./modules/capital/infrestructure/capital.module').then(m => m.CapitalModule)
+const routes: Routes = [
+  { path: 'login', component: PageLoginComponent },
+  {
+    path: 'capital',  component: CapitalComponent 
+    // loadChildren: () =>
+    //   import('./modules/capital/infrestructure/capital.module').then(
+    //     (m) => m.CapitalModule
+    //   ),
   },
-  {path:'region', 
-  loadChildren: () => import('./modules/region/infrestructure/region.module').then(m => m.RegionModule)
-},
-  // lazy load - 
-  {path:'pais',
-    loadChildren: () => import('./modules/pais/infrestructure/pais.module').then(m => m.PaisModule)
-  },
-  {path:'test',component:DemoButonsComponent},
-  {path:'**',redirectTo:'test'},
+  { path: 'region', component: RegionComponent},
+  { path: 'pais', component: PaisComponent},
+  { path: 'country/by/:id', component: CountryPageComponent },
+  { path: 'test', component: DemoButonsComponent },
+  { path: '**', redirectTo: 'capital' },
 ];
 @NgModule({
-  imports: [
-   RouterModule.forRoot(routes),
-  ],exports:[
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

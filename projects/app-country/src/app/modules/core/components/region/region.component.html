@@ -1,0 +1,11 @@
+
+<shared-title></shared-title>
+
+<mat-card>
+    <mat-card-content>
+        <shared-search-box  (onValue)="searchRegion($event)" [DatPlaceholder]="PlaceHolderRegion"></shared-search-box>
+     
+        <shared-not-found *ngIf="NotFound"></shared-not-found>
+        <shared-table  [data]="data"   *ngIf="!NotFound"></shared-table>
+    </mat-card-content>
+</mat-card>

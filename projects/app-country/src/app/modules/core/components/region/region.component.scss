@@ -1,0 +1,8 @@
+@import '../../../../../assets/scss/globalStyle';
+:host{
+   @extend .LayoutBody;
+}
+
+mat-card {
+   border-radius: 15px; // Ajusta el valor según sea necesario
+ }
