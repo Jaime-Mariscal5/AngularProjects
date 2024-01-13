@@ -9,63 +9,78 @@
  mat-card {
     border-radius: 15px; // Ajusta el valor según sea necesario
     mat-card-content{
-     
-      .Info-Country{
-         width: 100%;
-         padding: 30px 0px;
-         div{
-            width: 50%;
-            margin: 10px;
-         }
+
+      display: flex;
+      width:84%;
+      padding: 5vw 6.5vw 5vw 6.5vw;  // when the screen is big 2000px     padding: 5vw 7.1vw 5vw 7.1vw;
+      justify-content: center;
+      align-items: center;
+
+      .Contenido{
          display: flex;
-         .area-img{
-            display: block;
-            margin: auto;
+         width: 100%;
+         height: auto;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 34px;
+         flex-shrink: 0;
+
+
+         .Information{
+            display: flex;
+            width: 100%;
+            // width: 586px;
+            // height: 183px;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-shrink: 0;
+
+
             img{
-               display: block;
-               margin: auto;
-               width: 80%;
+               width: 47%;
+            }
+            .frame-text{
+               display: flex;
+               width: 50%;
+               height: auto;
+               flex-direction: column;
+               align-items: flex-start;
+               gap: 21px;
+               flex-shrink: 0;
+
+               h2{
+                  font-size: 36px;
+                  
+                  font-weight: 700;
+                  margin: 0;
+               }
+
+               p{
+                  font-size: 14px;
+                  
+                  font-weight: 300;
+                 // line-height: normal;
+                  margin: 0;
+
+                  span{
+                     font-weight: 700;
+                  }
+               }
+
             }
          }
-         .info-content{
 
-
+         .translation{
+            display: flex;
+            width: 100%;
+            height: auto;
+            padding: 0px 19px;
+            flex-direction: column;
+            align-items: center;
+            gap: 9px;
+            flex-shrink: 0;
          }
-
       }
     }
-  }
-
-
-  mat-grid-tile{
-   &:first-child{
-    img{
-      width: 80%;
-    }
-   }
-   &:nth-child(2) , &:nth-child(3) {
-      div{
-         justify-content:start !important;
-         align-items: start !important;
-         flex-direction: column;
-      }
-    }
-
-    &:nth-child(3) {
-      div{
-         margin: 6px;
-         padding: 0px 5%;
-         display: flex;
-         flex-direction: row;
-      }
-
-      // mat-chip-set{
-      //    div{
-      //       display: flex;
-      //       flex-direction: row;
-      //    }
-      // }
-    }
-
- 
   }

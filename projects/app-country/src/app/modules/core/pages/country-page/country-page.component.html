@@ -10,80 +10,37 @@
     <mat-card>
       <mat-card-content>
 
-        <div class="Info-Country">  
-          <div class="area-img">
+        <div class="Contenido">
+
+
+          <div class="Information">  
             <img [src]="Country.flags.svg" [alt]="Country.name.common" />
+       
+            <div class="frame-text">
+                <h2> Información </h2>
+                <div>
+                  <p><span>Región: </span>{{Country.region}}</p>
+                  <p><span>Subregión: </span>{{Country.subregion}}</p>
+                  <p><span>Capital: </span> {{Country.capital[0] | uppercase}}</p>
+                  <p><span>Población: </span>{{Country.population | number }}</p>
+                  <p *ngFor="let currency of Country.currencies | keyvalue"><span>Moneda: </span>{{currency.value.symbol}} - {{currency.value.name}}</p>
+                </div>
+            </div>
+           </div>
+  
+          <div class="translation">
+            <mat-chip-set
+            class="example-chip"
+            cdkDropList
+            cdkDropListOrientation="horizontal">
+              <mat-chip *ngFor="let translation of translations | keyvalue"  class="example-box" cdkDrag>{{ translation.value.common }}</mat-chip>
+          </mat-chip-set>
+  
           </div>
-     
-          <div class="info-content">
-            <h2>Pais :{{Country.name.common | uppercase}}  </h2>
-
-              <ul>
-                <li>poblacion:</li>
-                <li>
-                  codigo:
-                </li>
-              </ul>
-          </div>
-         </div>
-
-        <div>
-          <mat-chip-set
-          class="example-chip"
-          cdkDropList
-          cdkDropListOrientation="horizontal">
-            <mat-chip *ngFor="let translation of translations | keyvalue"  class="example-box" cdkDrag>{{ translation.value.common }}</mat-chip>
-        </mat-chip-set>
 
         </div>
-    
-        <!--  
-            <shared-search-box
-              (onValue)="searchCapital($event)"
-              [DatPlaceholder]="PlaceHolderCap"
-            ></shared-search-box>
-            <shared-not-found *ngIf="NotFound"></shared-not-found>
-            <shared-table  [data]="data" *ngIf="!NotFound"></shared-table>
-                  <p>{{Country.name.common}}</p>
-        -->
 
-  
-
-         <!-- 
-
-          
-           <mat-grid-list cols="4" rowHeight="100px">
-            <mat-grid-tile [colspan]="2" [rowspan]="2">
-
-              <img [src]="Country.flags.svg" [alt]="Country.name.common" />
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]="2" [rowspan]="2">
-              <h2>Pais :{{Country.name.common | uppercase}}  </h2>
-
-              <ul>
-                <li>poblacion:</li>
-                <li>
-                  codigo:
-                </li>
-              </ul>
-
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]="4" [rowspan]="1">
-              <div>
-                <mat-chip-set
-                class="example-chip"
-                cdkDropList
-                cdkDropListOrientation="horizontal">
-                  <mat-chip *ngFor="let translation of translations | keyvalue"  class="example-box" cdkDrag>{{ translation.value.common }}</mat-chip>
-              </mat-chip-set>
-              </div>
-            </mat-grid-tile>
-            
-          </mat-grid-list>
-        
-        -->
-
-
+       
          
     
       </mat-card-content>
