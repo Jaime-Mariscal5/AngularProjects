@@ -13,6 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 //anmiation
 import { LottieModule } from 'ngx-lottie';
+import { LoadingComponent } from './components/loading/loading.component';
 export function playerFactory(){
   return import('lottie-web');
 }
@@ -25,6 +26,7 @@ export function playerFactory(){
     SearchBoxComponent,
     TableComponent,
     NotFoundComponent,
+    LoadingComponent,
   ],
   imports: [
     MaterialModule,
@@ -39,6 +41,7 @@ export function playerFactory(){
     TitleComponent,
     TableComponent,
     NotFoundComponent,
+    LoadingComponent,
   ]
 })
 export class SharedModule {

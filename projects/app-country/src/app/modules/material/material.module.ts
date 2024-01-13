@@ -1,25 +1,27 @@
 import { NgModule } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 
 //table
-import { MatPaginatorModule} from '@angular/material/paginator';
-import { MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatChipsModule} from '@angular/material/chips';
+import {CdkDragDrop, moveItemInArray, CdkDrag, CdkDropList} from '@angular/cdk/drag-drop';
 // Importa otros componentes de Angular Material que desees utilizar
 
 const materialModules = [
-    MatSidenavModule,
+  MatSidenavModule,
   MatButtonModule,
   MatInputModule,
   MatCardModule,
@@ -29,13 +31,17 @@ const materialModules = [
   MatTooltipModule,
   MatMenuModule,
   MatPaginatorModule,
-   MatTableModule,
-   MatListModule,
-   MatFormFieldModule
+  MatTableModule,
+  MatListModule,
+  MatFormFieldModule,
+  MatProgressSpinnerModule,
+  MatGridListModule,
+  MatChipsModule,
+  CdkDropList, CdkDrag
 ];
 
 @NgModule({
   imports: [...materialModules],
   exports: [...materialModules],
 })
-export class MaterialModule { }
+export class MaterialModule {}

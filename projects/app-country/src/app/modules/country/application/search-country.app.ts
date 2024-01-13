@@ -2,6 +2,8 @@ import { Inject, Injectable } from '@angular/core';
 import { showCountry } from './show-country.app';
 import { countryInfrestructure } from '../infrestructure/country.infrestructure';
 import { countryRepository } from '../domain/repository/country.reposiotry';
+import { Country } from '../domain/interface/country.interface';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class searchCountry {
@@ -39,5 +41,7 @@ export class searchCountry {
     });
   }
 
-  SearchByAlphaCode(code: string) {}
+  SearchByAlphaCode(code: string): Observable<Country | null> {
+    return this.countryRepo.getCountryByAlphaCode(code);
+  }
 }

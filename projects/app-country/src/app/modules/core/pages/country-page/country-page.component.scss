@@ -1,0 +1,71 @@
+
+@import '../../../../../assets/scss/globalStyle';
+
+
+:host{
+    @extend .LayoutBody;
+ }
+ 
+ mat-card {
+    border-radius: 15px; // Ajusta el valor según sea necesario
+    mat-card-content{
+     
+      .Info-Country{
+         width: 100%;
+         padding: 30px 0px;
+         div{
+            width: 50%;
+            margin: 10px;
+         }
+         display: flex;
+         .area-img{
+            display: block;
+            margin: auto;
+            img{
+               display: block;
+               margin: auto;
+               width: 80%;
+            }
+         }
+         .info-content{
+
+
+         }
+
+      }
+    }
+  }
+
+
+  mat-grid-tile{
+   &:first-child{
+    img{
+      width: 80%;
+    }
+   }
+   &:nth-child(2) , &:nth-child(3) {
+      div{
+         justify-content:start !important;
+         align-items: start !important;
+         flex-direction: column;
+      }
+    }
+
+    &:nth-child(3) {
+      div{
+         margin: 6px;
+         padding: 0px 5%;
+         display: flex;
+         flex-direction: row;
+      }
+
+      // mat-chip-set{
+      //    div{
+      //       display: flex;
+      //       flex-direction: row;
+      //    }
+      // }
+    }
+
+ 
+  }
