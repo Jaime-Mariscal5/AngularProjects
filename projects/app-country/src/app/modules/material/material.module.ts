@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 
+
 //table
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
@@ -17,7 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
-import {CdkDragDrop, moveItemInArray, CdkDrag, CdkDropList} from '@angular/cdk/drag-drop';
+import {CdkDrag, CdkDropList} from '@angular/cdk/drag-drop';
+import { MatSelectModule } from '@angular/material/select';
 // Importa otros componentes de Angular Material que desees utilizar
 
 const materialModules = [
@@ -37,7 +39,8 @@ const materialModules = [
   MatProgressSpinnerModule,
   MatGridListModule,
   MatChipsModule,
-  CdkDropList, CdkDrag
+  CdkDropList, CdkDrag,
+  MatSelectModule
 ];
 
 @NgModule({

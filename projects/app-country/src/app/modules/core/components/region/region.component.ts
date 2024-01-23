@@ -33,8 +33,8 @@ export class RegionComponent {
     })
   }
 
-  searchRegion(str:string){
-    this.searchCountry.execute(str , 'ByRegion');
+  searchRegion(region: string): void {
+    this.searchCountry.execute(region, 'ByRegion');
   }
   
 }

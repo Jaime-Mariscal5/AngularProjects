@@ -2,8 +2,11 @@
 
 <mat-card>
   <mat-card-content>
+    <!-- (onValue)="searchCapital($event)" -->
     <shared-search-box
-      (onValue)="searchCapital($event)"
+    
+     
+      (onDebounce)="searchCapital($event)"
       [DatPlaceholder]="PlaceHolderCap"
     ></shared-search-box>
     <shared-not-found *ngIf="NotFound"></shared-not-found>

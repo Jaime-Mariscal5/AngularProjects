@@ -4,7 +4,7 @@
 <mat-card>
     <mat-card-content>
         <shared-search-box 
-        (onValue)="searchPais($event)"
+        (onDebounce)="searchPais($event)"
         [DatPlaceholder]="PlaceHolderCountry"></shared-search-box>
         <shared-not-found *ngIf="NotFound"></shared-not-found>
         <shared-table [data]="data"   *ngIf="!NotFound"></shared-table>

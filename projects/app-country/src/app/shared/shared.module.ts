@@ -10,10 +10,11 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { MaterialModule } from '../modules/material/material.module';
 import { TableComponent } from './components/table/table.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-
+import { RouterModule } from '@angular/router';
 //anmiation
 import { LottieModule } from 'ngx-lottie';
 import { LoadingComponent } from './components/loading/loading.component';
+import { SelectRegionsComponent } from './components/select-regions/select-regions.component';
 export function playerFactory(){
   return import('lottie-web');
 }
@@ -27,10 +28,12 @@ export function playerFactory(){
     TableComponent,
     NotFoundComponent,
     LoadingComponent,
+    SelectRegionsComponent,
   ],
   imports: [
     MaterialModule,
     CommonModule,  
+    RouterModule,
     LottieModule.forRoot({player:playerFactory}),// animation  
   ],
   exports:[
@@ -42,6 +45,7 @@ export function playerFactory(){
     TableComponent,
     NotFoundComponent,
     LoadingComponent,
+    SelectRegionsComponent,
   ]
 })
 export class SharedModule {

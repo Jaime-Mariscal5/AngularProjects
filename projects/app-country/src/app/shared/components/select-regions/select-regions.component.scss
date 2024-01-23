@@ -1,0 +1,58 @@
+
+mat-form-field{
+    width: 100%;
+
+}
+
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #1b1c22;
+}
+
+
+
+// Estilos para el mat-select
+.mat-select {
+    background-color: #1b1c22; // Color de fondo
+    color: #9a9cae; // Color del texto
+    border: 1px solid #363843; // Color del borde
+  
+    // Estilos para el foco
+    &:focus {
+      border: 1px solid #26272f;
+    }
+  
+    // Estilos para la flecha
+    .mat-select-arrow-wrapper {
+      color: #363843; // Color de la flecha
+    }
+  
+    // Estilos para el menú de opciones
+    .mat-select-panel {
+      background-color: #26272f; // Color de fondo del menú
+      color: #363843; // Color del texto en el menú
+    }
+    
+    // Estilos para las opciones individuales en el menú
+    .mat-option {
+      &:hover {
+        background-color: #363843; // Color de fondo al pasar el mouse sobre las opciones
+        color: #ffffff; // Color del texto al pasar el mouse sobre las opciones
+      }
+    }
+  }
+
+  .style-select{
+
+    display: block;
+    width: 80%;
+    padding: 0.775rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    appearance: none;
+    background-clip: padding-box;
+    border-radius: 0.475rem;
+
+  }
+  
