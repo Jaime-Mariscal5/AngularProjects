@@ -20,6 +20,8 @@ import { CapitalComponent } from './components/capital/capital.component';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthApplication } from './auth/application/auth.application';
+import { AuthAdapter } from './auth/infrestructure/auth.adapter';
 
 export function playerFactory(){
   return import('lottie-web');
@@ -27,8 +29,8 @@ export function playerFactory(){
 
 
 
-const PropAplication = [ searchCountry , showCountry ]; //agregfar clase application
-const PropInfrastructure = [ countryInfrestructure ];
+const PropAplication = [ searchCountry , showCountry  , AuthApplication]; //agregfar clase application
+const PropInfrastructure = [ countryInfrestructure ,AuthAdapter ];
 @NgModule({
   declarations: [
      PageLoginComponent,

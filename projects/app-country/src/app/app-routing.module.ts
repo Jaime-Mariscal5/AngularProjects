@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'pais', component: PaisComponent},
   { path: 'country/by/:id', component: CountryPageComponent },
   { path: 'test', component: DemoButonsComponent },
-  { path: '**', redirectTo: 'capital' },
+  { path: '**', redirectTo: 'login' },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

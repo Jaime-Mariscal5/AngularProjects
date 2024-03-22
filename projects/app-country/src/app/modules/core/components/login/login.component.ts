@@ -6,6 +6,8 @@ import {
 
   Validators,
 } from '@angular/forms';
+import { Auth } from '../../auth/domain/auth';
+import { AuthApplication } from '../../auth/application/auth.application';
 
 @Component({
   selector: 'appC-login',
@@ -20,17 +22,23 @@ export class LoginComponent {
    fg!: FormGroup;
    capsLockOn: boolean = false;
 
-  constructor(private readonly router: Router) {
+  constructor(
+    private readonly router: Router,
+    private readonly application: AuthApplication,
+    ) {
     this.createFormLogin();
   }
 
   login() {
-    //angulakr tiene uns ervicio llamada router que tiene una opcion para navegar 
+    //angular tiene un servicio llamada router que tiene una opcion para navegar 
     //por componentes declarados en las rotas
    // this.router.navigate(['test']);
-   if(this.fg.valid){
-    this.router.navigate(['capital']);
-   }
+   const { email, password } = this.fg.value;
+   const auth = new Auth(email, password);
+   this.application.login(auth);
+  //  if(this.fg.valid){
+  //   this.router.navigate(['capital']);
+  //  }
   }
 
   createFormLogin() {

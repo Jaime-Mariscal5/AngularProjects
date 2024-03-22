@@ -15,12 +15,12 @@ export class RegionComponent {
   data:Country[] =[];
   NotFound:boolean = false;
   constructor(
-    private readonly layoutS:layoutService,
-    private searchCountry:searchCountry,
-    private showCountry:showCountry
+      private readonly layoutS:layoutService,
+      private searchCountry:searchCountry,
+      private showCountry:showCountry
     ){
-    layoutS.configuration = { showMenu: true, showHeader: true };
-  }
+      layoutS.configuration = { showMenu: true, showHeader: true };
+    }
 
   ngOnInit(): void {
     this.showCountry.getCountry().subscribe((countries)=>{

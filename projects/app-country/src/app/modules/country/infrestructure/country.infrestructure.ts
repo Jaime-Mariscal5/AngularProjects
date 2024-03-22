@@ -8,6 +8,13 @@ import { Country } from '../domain/interface/country.interface';
 export class countryInfrestructure implements countryRepository {
   private ApiUrl: string = 'https://restcountries.com/v3.1';
 
+  //cacheStorage
+  public cacheStore = {
+    byCapital: {term:'',countries:[]},
+    byCountries: {term:'',countries:[]},
+      bRegion: {term:'',countries:[]},
+  }
+
   constructor(private http: HttpClient) {}
 
   getCountry(term: string, endpoint: string): Observable<Country[]  > {
